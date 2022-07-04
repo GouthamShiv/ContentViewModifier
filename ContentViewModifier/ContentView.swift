@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
+        VStack(alignment: .center, spacing: 20) {
             Button(action: {
                 print("Basic button is clicked")
             }, label: {
@@ -25,8 +25,15 @@ struct ContentView: View {
                    label: {
                 Text("Rounded button view modifier")
             })
-            .frame(height: 50)
             .modifier(RoundedButtonModifier())
+            
+            Button(action: {
+                print("Extension Button Modifier is clicked")
+            },
+                   label: {
+                Text("Rounded extension button")
+            })
+            .rounded()
         }
     }
 }

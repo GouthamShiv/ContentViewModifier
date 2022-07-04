@@ -11,7 +11,7 @@ struct RoundedButtonModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.footnote)
-            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+            .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
             .foregroundColor(.white)
             .background(RoundedRectangle(cornerRadius: .infinity)
                 .foregroundColor(.accentColor))
